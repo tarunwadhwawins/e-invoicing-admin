@@ -1,0 +1,52 @@
+{
+  "name": "invoicing-application",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://ditstekdemo.com/e-invoicing",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "apexcharts": "^3.31.0",
+    "env-cmd": "^10.1.0",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-apexcharts": "^1.3.9",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.4",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start-dev": "env-cmd -f ./environments/.env.development react-scripts start",
+    "build-dev": "env-cmd -f ./environments/.env.development react-scripts build && copy web.config build",
+    "start-qa": "env-cmd -f ./environments/.env.qa react-scripts start",
+    "build-qa": "env-cmd -f ./environments/.env.qa react-scripts build && copy web.config build",
+    "start-pro": "env-cmd -f ./environments/.env.production react-scripts start",
+    "build-pro": "env-cmd -f ./environments/.env.production react-scripts build && copy web.config build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

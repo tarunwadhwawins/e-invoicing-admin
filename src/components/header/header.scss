@@ -1,0 +1,89 @@
+@import "../../assets/scss/variables.scss";
+.headerTop {
+    padding: 10px 15px;
+    border-bottom: 1px solid $alternate-color-300;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    .logoMenu {
+        display: flex;
+        align-items: center;
+        img.ui.image {
+            max-width: 200px;
+            margin-left: 20px;
+        }
+    }
+    .dropDowns {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .ui.dropdown {
+        i.icon.bell {
+            font-size: 30px;
+            color: $secondary-color;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu {
+            .ui.card {
+                .content {
+                    &:first-child {
+                        padding: 5px 0;
+                    }
+                    .header {
+                        box-shadow: none;
+                        padding: 10px;
+                    }
+                    .ui.feed {
+                        .event {
+                            margin: 0 0 15px;
+                            .label {
+                                height: 40px;
+                                width: 40px;
+                                border-radius: 50%;
+                                .ui.image {
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                            .content {
+                                margin: 0 0 0 10px;
+                                .summary {
+                                    a {
+                                        // color: $secondary-color;
+                                    }
+                                }
+                                .date {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .user {
+        align-items: center;
+        display: inline-flex;
+        img.ui.image {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 10px;
+        }
+        .ui.dropdown {
+            padding: 10px 0;
+            i.icon.dropdown {
+                margin: 0;
+            }
+        }
+    }
+}

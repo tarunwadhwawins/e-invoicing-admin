@@ -1,0 +1,57 @@
+@import "../../assets/scss/variables.scss";
+.invoiceSummary.ui.card {
+    box-shadow: none;
+    &:hover {
+        box-shadow: none;
+    }
+    .content {
+        img.ui.image {
+            width: 50px;
+        }
+        .header {
+            color: $contrast-color;
+            font-size: 25px;
+        }
+        .meta {
+            color: $contrast-color;
+            font-size: 18px;
+            padding: 10px 0 0;
+        }
+    }
+    &.purple {
+        background-color: #8e60fd;
+    }
+    &.red {
+        background-color: #ff6061;
+    }
+    &.yellow {
+        background-color: #ffa800;
+    }
+    &.blue {
+        background-color: #0fb5c2;
+    }
+}
+
+.recentActivity.ui.card {
+    box-shadow: none;
+    &:hover {
+        box-shadow: none;
+    }
+    .content{
+        .ui.list {
+            .item {
+                border-bottom: 1px solid $alternate-color-300;
+                padding: 15px 0;
+                &:last-child {
+                    border: none;
+                }
+                img.ui.image {
+                    object-fit: cover;
+                    height: 35px;
+                    width: 35px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

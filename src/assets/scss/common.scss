@@ -1,0 +1,104 @@
+@import "./variables.scss";
+
+.field {
+    .ui.input {
+        input {
+            &:focus {
+                border-color: $secondary-color !important;
+            }
+        }
+    }
+    textarea {
+        &:focus {
+            border-color: $secondary-color !important;
+        }
+    }
+    .ui.selection.dropdown {
+        &:focus {
+            border-color: $secondary-color !important;
+        }
+        .menu {
+            border-color: $secondary-color !important;
+        }
+    }
+}
+.commonTable {
+    .ui.table {
+        border:none;
+        thead {
+            tr {
+                th {
+                    background-color: $alternate-color-300;
+                    color: $secondary-color;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+.commonToggle.field {
+    .ui.toggle.checkbox {
+        &.checked {
+            label {
+                &::before {
+                    background-color: $secondary-color !important;
+                }
+            }
+        }
+    }
+}
+
+.btn-primary.ui.button {
+    background-color: $primary-color;
+    color: $default-color;
+    border-radius: 7px;
+    padding: 10px 25px;
+    font-size: 18px;
+    border: 2px solid $primary-color;
+    &:hover,&:focus {
+        background-color: transparent;
+        border-color: $default-color;
+        color: $default-color;
+    }
+    i.icon {
+        color: $secondary-color !important;
+        opacity: 1;
+    }
+}
+.btn-secondary.ui.button {
+    background-color: $secondary-color;
+    color: $contrast-color;
+    border-radius: 7px;
+    padding: 10px 25px;
+    font-size: 18px;
+    border: 2px solid $secondary-color;
+    &:hover,&:focus {
+        background-color: $contrast-color;
+        color: $secondary-color;
+        i.icon {
+            color: $secondary-color !important;
+        }
+    }
+    i.icon {
+        color: $contrast-color !important;
+        opacity: 1;
+    }
+}
+p {
+    margin: 0 !important;
+}
+
+.pageWrapper {
+    padding: 93px 0 0 200px;
+    background-color: $contrast-color;
+    .pageWrapperInner {
+        padding: 15px;
+        overflow: auto;
+        height: calc(100vh - 93px);
+        .contentWrapper {
+            background-color: $alternate-color-100;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    }
+}
