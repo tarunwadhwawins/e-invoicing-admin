@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Header, Form, Card, Image, Table, Icon, Button, Feed, List } from 'semantic-ui-react';
+import { Grid, Header, Form, Card, Image, Table, Icon, Button, List } from 'semantic-ui-react';
 import Image1 from '../../assets/images/collection.svg'
 import Image2 from '../../assets/images/Outstanding.svg'
 import Image3 from '../../assets/images/overdue.svg'

@@ -1,0 +1,39 @@
+@import "../../assets/scss/variables.scss";
+.crmBtns.ui.buttons {
+    .ui.button {
+        &.active {
+            background-color: $secondary-color;
+            color: $contrast-color;
+        }
+    }
+}
+.crmBox {
+    border-radius: 10px;
+    padding: 20px;
+    img.ui.image {
+        max-width: 70px;
+        margin: 0;
+    }
+    h2.ui.header {
+        font-size: 40px;
+        color: $contrast-color;
+        margin: 0;
+    }
+    h4.ui.header {
+        color: $contrast-color;
+        margin: 0;
+        min-height: 40px;
+    }
+    &.purple {
+        background-color: #8e60fd;
+    }
+    &.red {
+        background-color: #ff6061;
+    }
+    &.yellow {
+        background-color: #ffa800;
+    }
+    &.blue {
+        background-color: #0fb5c2;
+    }
+}

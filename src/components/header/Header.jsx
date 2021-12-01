@@ -75,7 +75,7 @@ const Header = () => {
                             <Dropdown multiple floating icon='angle down' >
                                 <Dropdown.Menu className='left'>
                                     <Dropdown.Menu scrolling>
-                                        <Dropdown.Item  as={Link} to={`${env.PUBLIC_URL}/dashboard/profile`}><Icon name="user" /> Profile Setup</Dropdown.Item>
+                                        <Dropdown.Item><Icon name="user" /> Profile Setup</Dropdown.Item>
                                         <Dropdown.Item><Icon name="setting" /> User Setting</Dropdown.Item>
                                         <Dropdown.Item  as={Link} to={`${env.PUBLIC_URL}/`}><Icon name="log out" /> Log Out</Dropdown.Item>
                                     </Dropdown.Menu>

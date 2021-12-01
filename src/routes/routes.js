@@ -6,6 +6,7 @@ import Login from '../views/signin/Signin'
 import Subscription from "../views/subscription/Subscription";
 import { env } from '../shared/functional/global-import/index';
 import Dashboard from '../views/dashboard/Dashboard'
+import CRM from "../views/crm/CRM";
 
 
 const Routes = ()=>{
@@ -22,6 +23,7 @@ const DashboardContainer = ({match})=>(
         <Switch>
             <Route exact  path={`${env.PUBLIC_URL}/dashboard/dashboard`} component={Dashboard}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/subscription`} component={Subscription}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/crm`} component={CRM}/>
         </Switch>
     </DashboardLayout>
 )
