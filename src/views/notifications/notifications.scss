@@ -1,0 +1,25 @@
+@import "../../assets/scss/variables.scss";
+.notificationPage {
+    .ui.list {
+        .item {
+            padding: 20px 0;
+            border-bottom: 1px solid $alternate-color-300;
+            &:last-child {
+                border: none;
+            }
+            img.ui.image {
+                height: 50px;
+                width: 50px;
+                object-fit: cover;
+            }
+            .content {
+                padding: 6px 0 0 15px;
+                .header {
+                    padding: 0 0 5px;
+                    font-size: 18px;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

@@ -12,8 +12,8 @@ const Header = () => {
             <Grid>
                 <Grid.Column width={8}>
                     <div className="logoMenu">
-                        <Icon name="sidebar" size="big" link />
                         <Image src={Logo} />
+                        <Icon name="sidebar" size="big" link />
                     </div>
                 </Grid.Column>
                 <Grid.Column width={8} textAlign="right" verticalAlign="middle">
@@ -32,7 +32,7 @@ const Header = () => {
                                                 </Feed.Label>
                                                 <Feed.Content>
                                                     <Feed.Summary>
-                                                        You added <a>Jenny Hess</a> to your <a>coworker</a> group.
+                                                        You added <a>Smith</a> as Sub-admin.
                                                     </Feed.Summary>
                                                     <Feed.Date content='1 day ago' />
                                                 </Feed.Content>
@@ -44,7 +44,7 @@ const Header = () => {
                                                 </Feed.Label>
                                                 <Feed.Content>
                                                     <Feed.Summary>
-                                                        You added <a>Molly Malone</a> as a friend.
+                                                        <a>James</a> have joined Flat-rate plan.
                                                     </Feed.Summary>
                                                     <Feed.Date content='3 days ago' />
                                                 </Feed.Content>
@@ -56,7 +56,7 @@ const Header = () => {
                                                 </Feed.Label>
                                                 <Feed.Content>
                                                     <Feed.Summary>
-                                                        You added <a>Elliot Baker</a> to your <a>musicians</a> group.
+                                                        <a>Richard</a> have joined 	Upfront Commision plan.
                                                     </Feed.Summary>
                                                     <Feed.Date content='4 days ago' />
                                                 </Feed.Content>
@@ -64,7 +64,7 @@ const Header = () => {
                                         </Feed>
                                     </Card.Content>
                                     <Card.Content extra>
-                                        <a>All Notifications</a>
+                                        <Link  to={`${env.PUBLIC_URL}/dashboard/notifications`}>All Notifications</Link>
                                     </Card.Content>
                                 </Card>
                             </Dropdown.Menu>
@@ -75,9 +75,8 @@ const Header = () => {
                             <Dropdown multiple floating icon='angle down' >
                                 <Dropdown.Menu className='left'>
                                     <Dropdown.Menu scrolling>
-                                        <Dropdown.Item><Icon name="user" /> Profile Setup</Dropdown.Item>
-                                        <Dropdown.Item><Icon name="setting" /> User Setting</Dropdown.Item>
-                                        <Dropdown.Item  as={Link} to={`${env.PUBLIC_URL}/`}><Icon name="log out" /> Log Out</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/user-setting`}><Icon name="setting" /> User Setting</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to={`${env.PUBLIC_URL}/`}><Icon name="log out" /> Log Out</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown.Menu>
                             </Dropdown>

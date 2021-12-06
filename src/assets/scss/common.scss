@@ -1,5 +1,9 @@
 @import "./variables.scss";
 
+
+.secondary-color {
+    color: $secondary-color!important;
+}
 .field {
     .ui.input {
         input {

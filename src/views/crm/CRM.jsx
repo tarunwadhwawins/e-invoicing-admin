@@ -1,6 +1,13 @@
 import React from 'react'
-import { Grid, Button, Table, Icon, Header, Form, Image } from 'semantic-ui-react'
-import Image1 from '../../assets/images/collection.svg'
+import { Grid, Button, Table, Icon, Header, Form, Image, Dropdown, Menu } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+
+import Image1 from '../../assets/images/active-client.svg'
+import Image2 from '../../assets/images/subscription.svg'
+import Image3 from '../../assets/images/cancel.svg'
+import Image4 from '../../assets/images/lost-client.svg'
+import Image5 from '../../assets/images/new-client.svg'
+import Image6 from '../../assets/images/notification.svg'
 import "./crm.scss"
 
 const CRM = () => {
@@ -20,43 +27,55 @@ const CRM = () => {
                 <Grid columns="equal">
                     <Grid.Column>
                         <div className="crmBox blue">
-                            <Image src={Image1} />
-                            <Header as="h2">20</Header>
+                            <div className="crmInnerBox">
+                                <Header as="h2">20</Header>
+                                <Image src={Image1} />
+                            </div>
                             <Header as="h4">Active Clients</Header>
                         </div>
                     </Grid.Column>
                     <Grid.Column>
                         <div className="crmBox purple">
-                            <Image src={Image1} />
-                            <Header as="h2">48</Header>
+                            <div className="crmInnerBox">
+                                <Header as="h2">18</Header>
+                                <Image src={Image2} />
+                            </div>
                             <Header as="h4">Active Subscriptions</Header>
                         </div>
                     </Grid.Column>
                     <Grid.Column>
                         <div className="crmBox yellow">
-                            <Image src={Image1} />
-                            <Header as="h2">15</Header>
+                            <div className="crmInnerBox">
+                                <Header as="h2">15</Header>
+                                <Image src={Image3} />
+                            </div>
                             <Header as="h4">Cancelled Subscriptions</Header>
                         </div>
                     </Grid.Column>
                     <Grid.Column>
                         <div className="crmBox red">
-                            <Image src={Image1} />
-                            <Header as="h2">12</Header>
+                            <div className="crmInnerBox">
+                                <Header as="h2">12</Header>
+                                <Image src={Image4} />
+                            </div>
                             <Header as="h4">Lost Clients</Header>
                         </div>
                     </Grid.Column>
                     <Grid.Column>
                         <div className="crmBox blue">
-                            <Image src={Image1} />
-                            <Header as="h2">25</Header>
+                            <div className="crmInnerBox">
+                                <Header as="h2">25</Header>
+                                <Image src={Image5} />
+                            </div>
                             <Header as="h4">New Clients</Header>
                         </div>
                     </Grid.Column>
                     <Grid.Column>
                         <div className="crmBox yellow">
-                            <Image src={Image1} />
-                            <Header as="h2">16</Header>
+                            <div className="crmInnerBox">
+                                <Header as="h2">16</Header>
+                                <Image src={Image6} />
+                            </div>
                             <Header as="h4">Subscription Due</Header>
                         </div>
                     </Grid.Column>
@@ -80,39 +99,51 @@ const CRM = () => {
 
                         <Table.Body>
                             <Table.Row>
-                                <Table.Cell>Smith</Table.Cell>
-                                <Table.Cell>smith@gmail.com</Table.Cell>
+                                <Table.Cell><Link to="#">Smith</Link></Table.Cell>
+                                <Table.Cell><Link to="#">smith@gmail.com</Link></Table.Cell>
                                 <Table.Cell>(854) 555-6545</Table.Cell>
                                 <Table.Cell><Form.Checkbox defaultChecked label="Approved" className="commonToggle" toggle /></Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="trash alternate" color='red' link />
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell>Richard</Table.Cell>
-                                <Table.Cell>richard@gmail.com</Table.Cell>
+                                <Table.Cell><Link to="#">Richard</Link></Table.Cell>
+                                <Table.Cell><Link to="#">richard@gmail.com</Link></Table.Cell>
                                 <Table.Cell>(546) 854-8545</Table.Cell>
                                 <Table.Cell><Form.Checkbox defaultChecked label="Approved" className="commonToggle" toggle /></Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="trash alternate" color='red' link />
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell>James</Table.Cell>
-                                <Table.Cell>james@gmail.com</Table.Cell>
+                                <Table.Cell><Link to="#">James</Link></Table.Cell>
+                                <Table.Cell><Link to="#">james@gmail.com</Link></Table.Cell>
                                 <Table.Cell>(754) 885-6555</Table.Cell>
                                 <Table.Cell><Form.Checkbox label="Approved" className="commonToggle" toggle /></Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="trash alternate" color='red' link />
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
                                 </Table.Cell>
                             </Table.Row>
                         </Table.Body>
+                        <Table.Footer>
+                            <Table.Row>
+                                <Table.HeaderCell colSpan='8'>
+                                    <Menu floated='right' pagination>
+                                        <Menu.Item as='a' icon>
+                                            <Icon name='chevron left' />
+                                        </Menu.Item>
+                                        <Menu.Item as='a'>1</Menu.Item>
+                                        <Menu.Item as='a'>2</Menu.Item>
+                                        <Menu.Item as='a'>3</Menu.Item>
+                                        <Menu.Item as='a'>4</Menu.Item>
+                                        <Menu.Item as='a' icon>
+                                            <Icon name='chevron right' />
+                                        </Menu.Item>
+                                    </Menu>
+                                </Table.HeaderCell>
+                            </Table.Row>
+                        </Table.Footer>
                     </Table>
                 </div>
             </Grid.Column>

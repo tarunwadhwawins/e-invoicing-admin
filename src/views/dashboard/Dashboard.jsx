@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Header, Form, Card, Image, Table, Icon, Button, List } from 'semantic-ui-react';
+import { Grid, Header, Form, Card, Image, Table, Icon, Tab, List, Label, Menu } from 'semantic-ui-react';
 import Image1 from '../../assets/images/collection.svg'
 import Image2 from '../../assets/images/Outstanding.svg'
 import Image3 from '../../assets/images/overdue.svg'
@@ -11,6 +11,177 @@ import Profile from "../../assets/images/profile.jpg"
 import Chart from "react-apexcharts";
 
 
+
+
+const panes = [
+    {
+        menuItem: 'Latest Invoices',
+        render: () =>
+            <Tab.Pane attached={false}>
+                <div className="commonTable">
+                    <Table singleLine>
+                        <Table.Header>
+                            <Table.Row>
+                                <Table.HeaderCell>Invoice Number<Icon name="sort" /></Table.HeaderCell>
+                                <Table.HeaderCell>Customer Name <Icon name="sort" /></Table.HeaderCell>
+                                <Table.HeaderCell>Amount <Icon name="sort" /></Table.HeaderCell>
+                                <Table.HeaderCell>Due Date<Icon name="sort" /></Table.HeaderCell>
+                                <Table.HeaderCell>Created <Icon name="sort" /></Table.HeaderCell>
+                                <Table.HeaderCell>Status <Icon name="sort" /></Table.HeaderCell>
+                                <Table.HeaderCell>Actions</Table.HeaderCell>
+                            </Table.Row>
+                        </Table.Header>
+
+                        <Table.Body>
+                            <Table.Row>
+                                <Table.Cell><Link to="#">551516</Link></Table.Cell>
+                                <Table.Cell><Link to="#">Mission Beach Villas</Link></Table.Cell>
+                                <Table.Cell>$18.00</Table.Cell>
+                                <Table.Cell>Nov 20, 2021</Table.Cell>
+                                <Table.Cell>Nov 20, 2021</Table.Cell>
+                                <Table.Cell>
+                                    <Label color="blue"> Pending</Label>
+                                </Table.Cell>
+                                <Table.Cell>
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                </Table.Cell>
+                            </Table.Row>
+                            <Table.Row>
+                                <Table.Cell><Link to="#">595625</Link></Table.Cell>
+                                <Table.Cell><Link to="#">Joseph	William</Link></Table.Cell>
+                                <Table.Cell>$22.00</Table.Cell>
+                                <Table.Cell>Nov 15, 2021</Table.Cell>
+                                <Table.Cell>Nov 15, 2021</Table.Cell>
+                                <Table.Cell>
+                                    <Label color="green"> Paid</Label>
+                                </Table.Cell>
+                                <Table.Cell>
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                </Table.Cell>
+                            </Table.Row>
+                            <Table.Row>
+                                <Table.Cell><Link  to="#">65452</Link></Table.Cell>
+                                <Table.Cell><Link  to="#">Jane Doe</Link></Table.Cell>
+                                <Table.Cell>$25.00</Table.Cell>
+                                <Table.Cell>Nov 18, 2021</Table.Cell>
+                                <Table.Cell>Nov 18, 2021</Table.Cell>
+                                <Table.Cell>
+                                    <Label color="blue"> Pending</Label>
+                                </Table.Cell>
+                                <Table.Cell>
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                </Table.Cell>
+                            </Table.Row>
+                        </Table.Body>
+                        <Table.Footer>
+                            <Table.Row>
+                                <Table.HeaderCell colSpan='8'>
+                                    <Menu floated='right' pagination>
+                                        <Menu.Item as='a' icon>
+                                            <Icon name='chevron left' />
+                                        </Menu.Item>
+                                        <Menu.Item as='a'>1</Menu.Item>
+                                        <Menu.Item as='a'>2</Menu.Item>
+                                        <Menu.Item as='a'>3</Menu.Item>
+                                        <Menu.Item as='a'>4</Menu.Item>
+                                        <Menu.Item as='a' icon>
+                                            <Icon name='chevron right' />
+                                        </Menu.Item>
+                                    </Menu>
+                                </Table.HeaderCell>
+                            </Table.Row>
+                        </Table.Footer>
+                    </Table>
+                </div>
+            </Tab.Pane>,
+    },
+    {
+        menuItem: 'Upcoming Invoices',
+        render: () => <Tab.Pane attached={false}>
+            <div className="commonTable">
+                <Table singleLine>
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell>Invoice Number<Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Customer Name <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Amount <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Due Date<Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Created <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Status <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Actions</Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Header>
+
+                    <Table.Body>
+                        <Table.Row>
+                            <Table.Cell><Link to="#">551516</Link></Table.Cell>
+                            <Table.Cell><Link to="#">Mission Beach Villas</Link></Table.Cell>
+                            <Table.Cell>$18.00</Table.Cell>
+                            <Table.Cell>Dec 20, 2021</Table.Cell>
+                            <Table.Cell>Dec 20, 2021</Table.Cell>
+                            <Table.Cell>
+                                <Label color="blue"> Pending</Label>
+                            </Table.Cell>
+                            <Table.Cell>
+                                <Icon name="edit outline" color="blue" title="Edit" link />
+                                <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                            </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell><Link to="#">595625</Link></Table.Cell>
+                            <Table.Cell><Link to="#">Joseph	William</Link></Table.Cell>
+                            <Table.Cell>$22.00</Table.Cell>
+                            <Table.Cell>Dec 15, 2021</Table.Cell>
+                            <Table.Cell>Dec 15, 2021</Table.Cell>
+                            <Table.Cell>
+                                <Label color="blue"> Pending</Label>
+                            </Table.Cell>
+                            <Table.Cell>
+                                <Icon name="edit outline" color="blue" title="Edit" link />
+                                <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                            </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell><Link  to="#">65452</Link></Table.Cell>
+                            <Table.Cell><Link  to="#">Jane Doe</Link></Table.Cell>
+                            <Table.Cell>$25.00</Table.Cell>
+                            <Table.Cell>Dec 18, 2021</Table.Cell>
+                            <Table.Cell>Dec 18, 2021</Table.Cell>
+                            <Table.Cell>
+                                <Label color="blue"> Pending</Label>
+                            </Table.Cell>
+                            <Table.Cell>
+                                <Icon name="edit outline" color="blue" title="Edit" link />
+                                <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                            </Table.Cell>
+                        </Table.Row>
+                    </Table.Body>
+                    <Table.Footer>
+                        <Table.Row>
+                            <Table.HeaderCell colSpan='8'>
+                                <Menu floated='right' pagination>
+                                    <Menu.Item as='a' icon>
+                                        <Icon name='chevron left' />
+                                    </Menu.Item>
+                                    <Menu.Item as='a'>1</Menu.Item>
+                                    <Menu.Item as='a'>2</Menu.Item>
+                                    <Menu.Item as='a'>3</Menu.Item>
+                                    <Menu.Item as='a'>4</Menu.Item>
+                                    <Menu.Item as='a' icon>
+                                        <Icon name='chevron right' />
+                                    </Menu.Item>
+                                </Menu>
+                            </Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Footer>
+                </Table>
+            </div>
+        </Tab.Pane>,
+    },
+]
 
 
 
@@ -49,7 +220,7 @@ const Dashboard = () => {
         },
         yaxis: {
             title: {
-                text: '$ (thousands)'
+                text: ''
             }
         },
         fill: {
@@ -58,24 +229,24 @@ const Dashboard = () => {
         tooltip: {
             y: {
                 formatter: function (val) {
-                    return "$ " + val + " thousands"
+                    return  val 
                 }
             }
         }
 
     })
     const [series, setSeries] = useState([{
-        name: 'Invoiced',
-        data: [1800, 2000, 1500, 510, 1500, 900, 811, 1255, 1300],
+        name: 'Total Client',
+        data: [25, 30, 15, 5, 15, 9, 8, 12, 13],
         color: '#2485b1'
     }, {
-        name: 'Received',
-        data: [1500, 900, 2000, 811, 1500, 105, 2000, 1541, 1800],
-        color:'#ffa800'
+        name: 'New Clients',
+        data: [10, 9, 20, 8, 10, 15, 20, 15, 18],
+        color: '#ffa800'
     }, {
-        name: 'Outstanding',
-        data: [1455, 922, 755, 665, 1804, 1600, 1754, 1154, 1054],
-        color:'#ff0000'
+        name: 'Lost Clients',
+        data: [15, 2, 5, 5, 14, 10, 14, 15, 10],
+        color: '#ff0000'
     }])
     return (
         <Grid>
@@ -140,73 +311,8 @@ const Dashboard = () => {
                     </Card.Content>
                 </Card>
             </Grid.Column>
-            <Grid.Column width={8} verticalAlign="middle">
-                <Header as="h3">Unpaid Invoices</Header>
-            </Grid.Column>
-            <Grid.Column width={8} textAlign="right">
-                <Button as={Link} to={`${env.PUBLIC_URL}/dashboard/invoices`} className="btn-secondary"><Icon name="plus" /> Create Invoice</Button>
-            </Grid.Column>
-            <Grid.Column width={16}>
-                <div className="commonTable">
-                    <Table singleLine>
-                        <Table.Header>
-                            <Table.Row>
-                                <Table.HeaderCell>#</Table.HeaderCell>
-                                <Table.HeaderCell>Client Name <i aria-hidden="true" class="sort icon"></i></Table.HeaderCell>
-                                <Table.HeaderCell>Date <i aria-hidden="true" class="sort icon"></i></Table.HeaderCell>
-                                <Table.HeaderCell>Total <i aria-hidden="true" class="sort icon"></i></Table.HeaderCell>
-                                <Table.HeaderCell>Overdue <i aria-hidden="true" class="sort icon"></i></Table.HeaderCell>
-                                <Table.HeaderCell>Outstanding <i aria-hidden="true" class="sort icon"></i></Table.HeaderCell>
-                                <Table.HeaderCell>Actions</Table.HeaderCell>
-                            </Table.Row>
-                        </Table.Header>
-
-                        <Table.Body>
-                            <Table.Row>
-                                <Table.Cell><Link>#9999</Link></Table.Cell>
-                                <Table.Cell>John Lilki</Table.Cell>
-                                <Table.Cell>September 14, 2020</Table.Cell>
-                                <Table.Cell>$452.00</Table.Cell>
-                                <Table.Cell>441 days</Table.Cell>
-                                <Table.Cell>$452.00</Table.Cell>
-                                <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="alarm" color='yellow' link />
-                                    <Icon name="trash alternate" color='red' link />
-                                </Table.Cell>
-                            </Table.Row>
-                            <Table.Row>
-                                <Table.Cell><Link>#655</Link></Table.Cell>
-                                <Table.Cell>Steve Smith</Table.Cell>
-                                <Table.Cell>September 14, 2020</Table.Cell>
-                                <Table.Cell>$553.00</Table.Cell>
-                                <Table.Cell>441 days</Table.Cell>
-                                <Table.Cell>$553.00</Table.Cell>
-                                <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="alarm" color='yellow' link />
-                                    <Icon name="trash alternate" color='red' link />
-                                </Table.Cell>
-                            </Table.Row>
-                            <Table.Row>
-                                <Table.Cell><Link>#2442</Link></Table.Cell>
-                                <Table.Cell>Jane Doe</Table.Cell>
-                                <Table.Cell>September 14, 2020</Table.Cell>
-                                <Table.Cell>$673.00</Table.Cell>
-                                <Table.Cell>441 days</Table.Cell>
-                                <Table.Cell>$673.00</Table.Cell>
-                                <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="alarm" color='yellow' link />
-                                    <Icon name="trash alternate" color='red' link />
-                                </Table.Cell>
-                            </Table.Row>
-                        </Table.Body>
-                    </Table>
-                </div>
+            <Grid.Column width={16} verticalAlign="middle">
+                <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
             </Grid.Column>
             <Grid.Column width={8}>
                 <Header as="h3">Invoice Summary</Header>

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Grid, Header, Form, Icon, Table, Label } from 'semantic-ui-react';
+import { Grid, Header, Form, Icon, Table, Label, Dropdown, Menu } from 'semantic-ui-react';
+import { Link } from 'react-router-dom'
+
 
 const Subscription = () => {
     return (
@@ -31,7 +33,7 @@ const Subscription = () => {
 
                         <Table.Body>
                             <Table.Row>
-                                <Table.Cell>Smith</Table.Cell>
+                                <Table.Cell><Link to="#">Smith</Link></Table.Cell>
                                 <Table.Cell>Flat-rate</Table.Cell>
                                 <Table.Cell>Monthly</Table.Cell>
                                 <Table.Cell>Nov 20, 2021</Table.Cell>
@@ -41,13 +43,12 @@ const Subscription = () => {
                                 </Table.Cell>
                                 <Table.Cell>$22.00</Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="trash alternate" color='red' link />
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon name="trash alternate outline" color="red" title="Delete" link />
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell>Richard</Table.Cell>
+                                <Table.Cell><Link to="#">Richard</Link></Table.Cell>
                                 <Table.Cell>Upfront Commision</Table.Cell>
                                 <Table.Cell>Annual</Table.Cell>
                                 <Table.Cell>Nov 15, 2021</Table.Cell>
@@ -57,13 +58,12 @@ const Subscription = () => {
                                 </Table.Cell>
                                 <Table.Cell>$22.00</Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="trash alternate" color='red' link />
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon name="trash alternate outline" color="red" title="Delete" link />
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell>James</Table.Cell>
+                                <Table.Cell><Link to="#">James</Link></Table.Cell>
                                 <Table.Cell>Flat-rate</Table.Cell>
                                 <Table.Cell>Monthly</Table.Cell>
                                 <Table.Cell>Nov 18, 2021</Table.Cell>
@@ -73,12 +73,29 @@ const Subscription = () => {
                                 </Table.Cell>
                                 <Table.Cell>$25.00</Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="pencil" color='green' link />
-                                    <Icon name="eye" color='teal' link />
-                                    <Icon name="trash alternate" color='red' link />
+                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon name="trash alternate outline" color="red" title="Delete" link />
                                 </Table.Cell>
                             </Table.Row>
                         </Table.Body>
+                        <Table.Footer>
+                            <Table.Row>
+                                <Table.HeaderCell colSpan='8'>
+                                    <Menu floated='right' pagination>
+                                        <Menu.Item as='a' icon>
+                                            <Icon name='chevron left' />
+                                        </Menu.Item>
+                                        <Menu.Item as='a'>1</Menu.Item>
+                                        <Menu.Item as='a'>2</Menu.Item>
+                                        <Menu.Item as='a'>3</Menu.Item>
+                                        <Menu.Item as='a'>4</Menu.Item>
+                                        <Menu.Item as='a' icon>
+                                            <Icon name='chevron right' />
+                                        </Menu.Item>
+                                    </Menu>
+                                </Table.HeaderCell>
+                            </Table.Row>
+                        </Table.Footer>
                     </Table>
                 </div>
             </Grid.Column>

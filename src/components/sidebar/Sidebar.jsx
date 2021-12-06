@@ -9,7 +9,7 @@ const Sidebar = () => {
     return (
         <div className="sideBar">
             <Menu text vertical>
-                <Menu.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/dashboard`}><Icon name="dashboard" /><span>Dashboard</span></Menu.Item>
+                <Menu.Item  as={Link} to={`${env.PUBLIC_URL}/dashboard/dashboard`}><Icon name="dashboard" /><span>Dashboard</span></Menu.Item>
                 <Menu.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/crm`}><Icon name="users" /><span>CRM</span></Menu.Item>
                 <Menu.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/subscription`}><Icon name="tags" /><span>Subscription</span></Menu.Item>
             </Menu>
