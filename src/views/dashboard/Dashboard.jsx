@@ -6,7 +6,6 @@ import Image3 from '../../assets/images/overdue.svg'
 import Image4 from '../../assets/images/client.svg'
 import "./dashboard.scss"
 import { Link } from 'react-router-dom'
-import { env } from '../../shared/functional/global-import';
 import Profile from "../../assets/images/profile.jpg"
 import Chart from "react-apexcharts";
 
@@ -23,7 +22,7 @@ const panes = [
                         <Table.Header>
                             <Table.Row>
                                 <Table.HeaderCell>Invoice Number<Icon name="sort" /></Table.HeaderCell>
-                                <Table.HeaderCell>Customer Name <Icon name="sort" /></Table.HeaderCell>
+                                <Table.HeaderCell>Client Name <Icon name="sort" /></Table.HeaderCell>
                                 <Table.HeaderCell>Amount <Icon name="sort" /></Table.HeaderCell>
                                 <Table.HeaderCell>Due Date<Icon name="sort" /></Table.HeaderCell>
                                 <Table.HeaderCell>Created <Icon name="sort" /></Table.HeaderCell>
@@ -62,8 +61,8 @@ const panes = [
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell><Link  to="#">65452</Link></Table.Cell>
-                                <Table.Cell><Link  to="#">Jane Doe</Link></Table.Cell>
+                                <Table.Cell><Link to="#">65452</Link></Table.Cell>
+                                <Table.Cell><Link to="#">Jane Doe</Link></Table.Cell>
                                 <Table.Cell>$25.00</Table.Cell>
                                 <Table.Cell>Nov 18, 2021</Table.Cell>
                                 <Table.Cell>Nov 18, 2021</Table.Cell>
@@ -106,7 +105,7 @@ const panes = [
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>Invoice Number<Icon name="sort" /></Table.HeaderCell>
-                            <Table.HeaderCell>Customer Name <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Client Name <Icon name="sort" /></Table.HeaderCell>
                             <Table.HeaderCell>Amount <Icon name="sort" /></Table.HeaderCell>
                             <Table.HeaderCell>Due Date<Icon name="sort" /></Table.HeaderCell>
                             <Table.HeaderCell>Created <Icon name="sort" /></Table.HeaderCell>
@@ -145,8 +144,8 @@ const panes = [
                             </Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><Link  to="#">65452</Link></Table.Cell>
-                            <Table.Cell><Link  to="#">Jane Doe</Link></Table.Cell>
+                            <Table.Cell><Link to="#">65452</Link></Table.Cell>
+                            <Table.Cell><Link to="#">Jane Doe</Link></Table.Cell>
                             <Table.Cell>$25.00</Table.Cell>
                             <Table.Cell>Dec 18, 2021</Table.Cell>
                             <Table.Cell>Dec 18, 2021</Table.Cell>
@@ -156,6 +155,83 @@ const panes = [
                             <Table.Cell>
                                 <Icon name="edit outline" color="blue" title="Edit" link />
                                 <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                            </Table.Cell>
+                        </Table.Row>
+                    </Table.Body>
+                    <Table.Footer>
+                        <Table.Row>
+                            <Table.HeaderCell colSpan='8'>
+                                <Menu floated='right' pagination>
+                                    <Menu.Item as='a' icon>
+                                        <Icon name='chevron left' />
+                                    </Menu.Item>
+                                    <Menu.Item as='a'>1</Menu.Item>
+                                    <Menu.Item as='a'>2</Menu.Item>
+                                    <Menu.Item as='a'>3</Menu.Item>
+                                    <Menu.Item as='a'>4</Menu.Item>
+                                    <Menu.Item as='a' icon>
+                                        <Icon name='chevron right' />
+                                    </Menu.Item>
+                                </Menu>
+                            </Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Footer>
+                </Table>
+            </div>
+        </Tab.Pane>,
+    },
+    {
+        menuItem: 'Unpaid Invoices',
+        render: () => <Tab.Pane attached={false}>
+            <div className="commonTable">
+                <Table singleLine>
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell>Invoice Number <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Client Name <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Date <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Total <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Overdue <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Outstanding <Icon name="sort" /></Table.HeaderCell>
+                            <Table.HeaderCell>Actions</Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Header>
+
+                    <Table.Body>
+                        <Table.Row>
+                            <Table.Cell><Link>#9999</Link></Table.Cell>
+                            <Table.Cell>John Lilki</Table.Cell>
+                            <Table.Cell>September 14, 2020</Table.Cell>
+                            <Table.Cell>$452.00</Table.Cell>
+                            <Table.Cell>441 days</Table.Cell>
+                            <Table.Cell>$452.00</Table.Cell>
+                            <Table.Cell>
+                                <Icon name="edit outline" color="blue" title="Edit" link />
+                                <Icon name="alarm outline" color="green" title="Reminder" link />
+                            </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell><Link>#655</Link></Table.Cell>
+                            <Table.Cell>Steve Smith</Table.Cell>
+                            <Table.Cell>September 14, 2020</Table.Cell>
+                            <Table.Cell>$553.00</Table.Cell>
+                            <Table.Cell>441 days</Table.Cell>
+                            <Table.Cell>$553.00</Table.Cell>
+                            <Table.Cell>
+                                <Icon name="edit outline" color="blue" title="Edit" link />
+                                <Icon name="alarm outline" color="green" title="Reminder" link />
+                            </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell><Link>#2442</Link></Table.Cell>
+                            <Table.Cell>Jane Doe</Table.Cell>
+                            <Table.Cell>September 14, 2020</Table.Cell>
+                            <Table.Cell>$673.00</Table.Cell>
+                            <Table.Cell>441 days</Table.Cell>
+                            <Table.Cell>$673.00</Table.Cell>
+                            <Table.Cell>
+                                <Icon name="edit outline" color="blue" title="Edit" link />
+                                <Icon name="alarm outline" color="green" title="Reminder" link />
                             </Table.Cell>
                         </Table.Row>
                     </Table.Body>
@@ -229,7 +305,7 @@ const Dashboard = () => {
         tooltip: {
             y: {
                 formatter: function (val) {
-                    return  val 
+                    return val
                 }
             }
         }

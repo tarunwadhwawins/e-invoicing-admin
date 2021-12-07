@@ -11,6 +11,7 @@ import BusinessProfile from "../views/businessProfile/BusinessProfile";
 import Agreement from "../views/agreement/Agreement";
 import Team from "../views/team/Team";
 import Notifications from "../views/notifications/Notifications";
+import SubscriptionPlan from "../views/subscriptionPlan/SubscriptionPlan";
 
 
 const Routes = ()=>{
@@ -34,6 +35,7 @@ const DashboardContainer = ({match})=>(
             <Route exact path={`${env.PUBLIC_URL}/dashboard/agreement`} component={Agreement}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/team`} component={Team}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/notifications`} component={Notifications}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/subscription-plan`} component={SubscriptionPlan}/>
         </Switch>
     </DashboardLayout>
 )

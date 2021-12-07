@@ -1,7 +1,6 @@
 import React from 'react'
 import { Grid, Header, Image } from 'semantic-ui-react'
 import Business from "../../assets/images/business.svg"
-import Catalogue from "../../assets/images/catalogue.svg"
 import Agreement from "../../assets/images/agreement.svg"
 import Team from "../../assets/images/team.svg"
 import Subscription from "../../assets/images/subscription-plan.svg"
@@ -18,7 +17,7 @@ const UserSetting = () => {
                     <Header as="h2">Company Profile Setup</Header>
                 </Grid.Column>
             </Grid>
-            <Grid columns={3}>
+            <Grid columns="4">
                 <Grid.Column>
                     <Link className="settingBox" to={`${env.PUBLIC_URL}/dashboard/business-profile`}>
                         <Image src={Business} />
@@ -35,6 +34,12 @@ const UserSetting = () => {
                     <Link className="settingBox" to={`${env.PUBLIC_URL}/dashboard/team`}>
                         <Image src={Team} />
                         <Header as="h3">Team</Header>
+                    </Link>
+                </Grid.Column>
+                <Grid.Column>
+                    <Link className="settingBox" to={`${env.PUBLIC_URL}/dashboard/subscription-plan`}>
+                        <Image src={Subscription} />
+                        <Header as="h3">Subscription Plan</Header>
                     </Link>
                 </Grid.Column>
             </Grid>

@@ -1,5 +1,16 @@
 @import "./variables.scss";
 
+.menuCollapse {
+    .sideBar {
+        left: -200px;
+        transition: .2s;
+    }
+    .pageWrapper {
+        padding-left: 0!important;
+        transition: .2s;
+    }
+}
+
 
 .secondary-color {
     color: $secondary-color!important;
@@ -95,6 +106,7 @@ p {
 .pageWrapper {
     padding: 93px 0 0 200px;
     background-color: $contrast-color;
+    transition: .2s;
     .pageWrapperInner {
         padding: 15px;
         overflow: auto;

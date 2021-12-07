@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Form, Icon, Table, Label, Dropdown, Menu } from 'semantic-ui-react';
+import { Grid, Header, Form, Icon, Table, Label, Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
 
 
@@ -21,7 +21,7 @@ const Subscription = () => {
                         <Table.Header>
                             <Table.Row>
                                 <Table.HeaderCell>Business Name <Icon name="sort" /></Table.HeaderCell>
-                                <Table.HeaderCell>Subscription Type <Icon name="sort" /></Table.HeaderCell>
+                                <Table.HeaderCell>Subscription Name <Icon name="sort" /></Table.HeaderCell>
                                 <Table.HeaderCell>Billing <Icon name="sort" /></Table.HeaderCell>
                                 <Table.HeaderCell>Start Date <Icon name="sort" /></Table.HeaderCell>
                                 <Table.HeaderCell>End Due <Icon name="sort" /></Table.HeaderCell>

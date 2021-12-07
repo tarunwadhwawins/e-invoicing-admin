@@ -6,14 +6,14 @@ import Profile from "../../assets/images/profile.jpg"
 import "./header.scss"
 import { env } from '../../shared/functional/global-import';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className="headerTop">
             <Grid>
                 <Grid.Column width={8}>
                     <div className="logoMenu">
                         <Image src={Logo} />
-                        <Icon name="sidebar" size="big" link />
+                        <Icon name="sidebar" size="big" link  onClick={props.onMenuClick}/>
                     </div>
                 </Grid.Column>
                 <Grid.Column width={8} textAlign="right" verticalAlign="middle">

@@ -8,6 +8,7 @@
     height: 100%;
     overflow: auto;
     background-color: $alternate-color-100;
+    transition: .2s;
     .ui.vertical.menu {
         width: 100%;
         margin: 0;
