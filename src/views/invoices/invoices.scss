@@ -20,5 +20,11 @@
             border-top: 1px solid $alternate-color-300;
             margin: 20px 0 0;
         }
+        .indiviCompany{
+            display: flex;
+            .ui.checkbox {
+                margin: 0 10px;
+            }
+        }
     }
 }

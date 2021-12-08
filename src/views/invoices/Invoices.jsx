@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Grid, Header, Accordion, Menu, Form, Button, Table, Input, Select, Dropdown } from 'semantic-ui-react'
+import { Grid, Header, Accordion, Menu, Form, Button, Table, Input, Select, Dropdown, Checkbox } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import './invoices.scss'
 import DatePicker from "react-datepicker";
@@ -22,6 +22,12 @@ let companyOptions = [
     { key: 'Company 2', text: 'Company 2', value: 'Company 2' },
     { key: 'Company 3', text: 'Company 3', value: 'Company 3' },
     { key: 'Company 4', text: 'Company 4', value: 'Company 4' },
+]
+let IndividualValue = [
+    { key: 'Individual 1', text: 'Individual 1', value: 'Individual 1' },
+    { key: 'Individual 2', text: 'Individual 2', value: 'Individual 2' },
+    { key: 'Individual 3', text: 'Individual 3', value: 'Individual 3' },
+    { key: 'Individual 4', text: 'Individual 4', value: 'Individual 4' },
 ]
 const paymentOptions = [
     { key: 'Line Item', value: 'Line Item', text: ' Line Item' },
@@ -91,8 +97,14 @@ const Invoices = () => {
 
     const [startDate, setStartDate] = useState(new Date());
 
+    const [allowPartialPayment, setAllowPartialPayment] = useState(false)
+    const [allowACHPayment, setAllowACHPayment] = useState(false)
+
+    const [isCompany, setIsCompany] = useState(false)
+
     const [currentValue, setCurrentValue] = useState("");
     const [currentCompanyValue, setCompanyCurrentValue] = useState("");
+    const [currentIndividualValue, setIndividualCurrentValue] = useState("");
 
     const handleAddition = (e, { value }) => {
         let a = { key: value, text: value, value: value }
@@ -107,6 +119,13 @@ const Invoices = () => {
     }
     const handleCompanyChange = (e, { value }) => {
         setCompanyCurrentValue(value)
+    }
+    const handleIndividualAddition = (e, { value }) => {
+        let a = { key: value, text: value, value: value }
+        currentIndividualValue = [...currentIndividualValue, { ...a }]
+    }
+    const handleIndividualChange = (e, { value }) => {
+        setIndividualCurrentValue(value)
     }
 
     const handleClick = (e, titleProps) => {
@@ -129,15 +148,22 @@ const Invoices = () => {
                     <Menu.Item>
                         <Accordion.Title
                             active={activeIndex === 0}
-                            content='Company Name'
                             index={0}
                             onClick={handleClick}
-                        />
+                        > <div className="indiviCompany">
+                                <span>Individual</span>
+                                <Checkbox toggle checked={isCompany} onChange={(e, data) => setIsCompany(data.checked)} />
+                                <span>Company</span>
+                            </div>
+                        </Accordion.Title>
                         <Accordion.Content active={activeIndex === 0}>
                             <Form size="large">
                                 <Grid columns="3">
+                                    <Grid.Column width={16}>
+                                        <Header as="h3">{isCompany ? 'Company Name' : 'Individual Name'}</Header>
+                                    </Grid.Column>
                                     <Grid.Column>
-                                        <Dropdown
+                                        {isCompany ? <Dropdown
                                             options={companyOptions}
                                             placeholder='Search & Select Company'
                                             search
@@ -149,10 +175,31 @@ const Invoices = () => {
                                             onAddItem={handleCompanyAddition}
                                             onChange={handleCompanyChange}
                                         />
+
+                                            :
+
+
+                                            <Dropdown
+                                                options={IndividualValue}
+                                                placeholder='Search & Select Individual'
+                                                search
+                                                selection
+                                                fluid
+                                                allowAdditions
+                                                additionLabel='New Individual: '
+                                                value={currentIndividualValue}
+                                                onAddItem={handleIndividualAddition}
+                                                onChange={handleIndividualChange}
+                                            />
+                                        }
+
+
+
                                     </Grid.Column>
                                     <Grid.Column>
                                         <Form.Input placeholder="Customer Number" fluid />
                                     </Grid.Column>
+
                                     <Grid.Column>
                                         <Form.Input placeholder="Invoice Number" fluid />
                                     </Grid.Column>
@@ -418,18 +465,28 @@ const Invoices = () => {
                                         <Form>
                                             <Form.Group inline>
                                                 <Form.Radio label='Sale' name="radioGroup" value="Sale" checked={value === "Sale"} onChange={handleTransactionChange} />
-                                                {/* <Form.Radio label='Authorization' name="radioGroup" value="Authorization" checked={value === "Authorization"} onChange={handleTransactionChange} /> */}
+                                                <Form.Radio label='Authorization' name="radioGroup" value="Authorization" checked={value === "Authorization"} onChange={handleTransactionChange} />
                                             </Form.Group>
                                         </Form>
                                     </Grid.Column>
                                     <Grid.Column width={16}>
                                         <Form>
                                             <Form.Group inline>
-                                                <Form.Checkbox label='Allow Partial Payment' />
-                                                <Form.Select placeholder='Partial Payment Type' options={paymentOptions} />
+                                                <Form.Checkbox checked={allowPartialPayment} onChange={(e, data) => {
+
+                                                    setAllowPartialPayment(data.checked)
+                                                    console.log(data, 'Checkbox')
+                                                }} label='Allow Partial Payment' />
+                                                {allowPartialPayment && <Form.Select placeholder='Partial Payment Type' options={paymentOptions} />}
                                                 <Form.Checkbox label='Require Shipping Details' />
-                                                <Form.Checkbox label='Pay via ACH' />
-                                                <Form.Select placeholder='ACH Processor' options={achOptions} />
+                                                <Form.Checkbox label='Pay via ACH' checked={allowACHPayment} onChange={(e, data) => {
+
+                                                    setAllowACHPayment(data.checked)
+                                                    console.log(data, 'Checkbox')
+                                                }} />
+                                                {allowACHPayment &&
+                                                    <Form.Select placeholder='ACH Processor' options={achOptions} />
+                                                }
                                                 <Form.Checkbox label='Pay via Mail' />
                                             </Form.Group>
                                         </Form>

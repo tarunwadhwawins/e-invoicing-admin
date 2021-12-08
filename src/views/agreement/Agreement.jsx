@@ -10,6 +10,8 @@ const Agreement = () => {
                 <Header as="h2">Agreements</Header>
             </Grid.Column>
             <Grid.Column width={8} textAlign="right">
+                <Button as={Link} to={`${env.PUBLIC_URL}/dashboard/user-setting`} className="btn-secondary">Upload Agreement</Button>
+                <Button as="a" target="_blank" href="https://youtu.be/2ZII3HOlIfA" className="btn-secondary">Create Agreement</Button>
                 <Button as={Link} to={`${env.PUBLIC_URL}/dashboard/user-setting`} className="btn-primary">Back</Button>
             </Grid.Column>
             <Grid.Column width={16}>
