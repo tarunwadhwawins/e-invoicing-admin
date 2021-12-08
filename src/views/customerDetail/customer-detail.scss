@@ -1,0 +1,28 @@
+@import "../../assets/scss/variables.scss";
+.customerDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $alternate-color-300;
+    padding: 0 0 5px;
+    .rightCard {
+        text-align: right;
+    }
+}
+.customerDesc {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0;
+    border-bottom: 1px solid $alternate-color-900;
+    .innerBox {
+        width: 50%;
+        .ui.list {
+            .item {
+                padding: 5px 0;
+                i.icon {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

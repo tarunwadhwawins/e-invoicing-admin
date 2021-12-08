@@ -12,6 +12,10 @@ import Agreement from "../views/agreement/Agreement";
 import Team from "../views/team/Team";
 import Notifications from "../views/notifications/Notifications";
 import SubscriptionPlan from "../views/subscriptionPlan/SubscriptionPlan";
+import InvoiceDetail from "../views/invoiceDetail/InvoiceDetail";
+import Invoices from "../views/invoices/Invoices";
+import Invoice from "../views/invoice-list/Invoice";
+import CustomerDetail from "../views/customerDetail/CustomerDetail";
 
 
 const Routes = ()=>{
@@ -36,6 +40,11 @@ const DashboardContainer = ({match})=>(
             <Route exact path={`${env.PUBLIC_URL}/dashboard/team`} component={Team}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/notifications`} component={Notifications}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/subscription-plan`} component={SubscriptionPlan}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/invoice-detail`} component={InvoiceDetail}/>
+            <Route exact  path={`${env.PUBLIC_URL}/dashboard/invoices`} component={Invoices}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/invoice`} component={Invoice}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/customer-detail`} component={CustomerDetail}/>
+
         </Switch>
     </DashboardLayout>
 )

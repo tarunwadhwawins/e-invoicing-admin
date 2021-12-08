@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Icon, Image, Dropdown, Card, Feed } from 'semantic-ui-react';
+import { Grid, Icon, Image, Dropdown, Card, Feed, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
 import Logo from "../../assets/images/logo-2.png"
 import Profile from "../../assets/images/profile.jpg"
@@ -13,11 +13,12 @@ const Header = (props) => {
                 <Grid.Column width={8}>
                     <div className="logoMenu">
                         <Image src={Logo} />
-                        <Icon name="sidebar" size="big" link  onClick={props.onMenuClick}/>
+                        <Icon name="sidebar" size="big" link onClick={props.onMenuClick} />
                     </div>
                 </Grid.Column>
                 <Grid.Column width={8} textAlign="right" verticalAlign="middle">
                     <div className="dropDowns">
+                        <Button as={Link} to={`${env.PUBLIC_URL}/dashboard/invoices`} className="btn-secondary"><Icon name="plus" /> Create Invoice</Button>
                         <Dropdown multiple icon='bell outline' floating>
                             <Dropdown.Menu className='left'>
                                 <Card fluid>
@@ -64,7 +65,7 @@ const Header = (props) => {
                                         </Feed>
                                     </Card.Content>
                                     <Card.Content extra>
-                                        <Link  to={`${env.PUBLIC_URL}/dashboard/notifications`}>All Notifications</Link>
+                                        <Link to={`${env.PUBLIC_URL}/dashboard/notifications`}>All Notifications</Link>
                                     </Card.Content>
                                 </Card>
                             </Dropdown.Menu>

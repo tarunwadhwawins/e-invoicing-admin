@@ -19,6 +19,10 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        .btn-secondary.ui.button {
+            font-size: 15px;
+            margin: 0 40px 0 0;
+        }
     }
     .ui.dropdown {
         i.icon.bell {
