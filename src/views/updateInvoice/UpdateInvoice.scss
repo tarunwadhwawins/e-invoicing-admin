@@ -1,0 +1,30 @@
+@import "../../assets/scss/variables.scss";
+.createInvoice.ui.vertical.menu {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    .item {
+        margin: 0 0 10px;
+        background-color: $contrast-color;
+        border-radius: 5px;
+        &::before {
+            display: none;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 16px 0;
+            border-top: 1px solid $alternate-color-300;
+            margin: 20px 0 0;
+        }
+        .indiviCompany{
+            display: flex;
+            .ui.checkbox {
+                margin: 0 10px;
+            }
+        }
+    }
+}

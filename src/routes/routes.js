@@ -16,6 +16,10 @@ import InvoiceDetail from "../views/invoiceDetail/InvoiceDetail";
 import Invoices from "../views/invoices/Invoices";
 import Invoice from "../views/invoice-list/Invoice";
 import CustomerDetail from "../views/customerDetail/CustomerDetail";
+import CustomerList from "../views/customerList/CustomerList";
+import AddCustomer from "../views/addCustomer/AddCustomer";
+import UpdateCustomer from "../views/updateCustomer/UpdateCustomer";
+import UpdateInvoice from "../views/updateInvoice/UpdateInvoice";
 
 
 const Routes = ()=>{
@@ -31,8 +35,7 @@ const DashboardContainer = ({match})=>(
     <DashboardLayout>
         <Switch>
             <Route exact  path={`${env.PUBLIC_URL}/dashboard/dashboard`} component={Dashboard}/>
-            <Route exact path={`${env.PUBLIC_URL}/dashboard/subscription`} component={Subscription}/>
-            <Route exact path={`${env.PUBLIC_URL}/dashboard/crm`} component={CRM}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/subscription`} component={Subscription}/>            
             <Route exact path={`${env.PUBLIC_URL}/dashboard/user-setting`} component={UserSetting}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/business-profile`} component={BusinessProfile}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/business-profile`} component={BusinessProfile}/>
@@ -44,6 +47,12 @@ const DashboardContainer = ({match})=>(
             <Route exact  path={`${env.PUBLIC_URL}/dashboard/invoices`} component={Invoices}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/invoice`} component={Invoice}/>
             <Route exact path={`${env.PUBLIC_URL}/dashboard/customer-detail`} component={CustomerDetail}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/crm`} component={CRM}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/customer-list`} component={CustomerList}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/add-customer`} component={AddCustomer}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/update-customer`} component={UpdateCustomer}/>
+            <Route exact path={`${env.PUBLIC_URL}/dashboard/update-invoice`} component={UpdateInvoice}/>
+            
 
         </Switch>
     </DashboardLayout>

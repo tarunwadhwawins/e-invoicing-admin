@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Grid, Header, Accordion, Menu, Form, Button, Table, Input, Select, Dropdown, Checkbox } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import './invoices.scss'
+import './UpdateInvoice.scss'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -90,16 +90,14 @@ const initialRows = [1];
 
 
 
-const Invoices = () => {
+const UpdateInvoice = () => {
     const [activeIndex, setActiveIndex] = useState(0)
 
     const [inputRows, setInputRows] = useState(initialRows)
 
     const [startDate, setStartDate] = useState(new Date());
-
     const [allowPartialPayment, setAllowPartialPayment] = useState(false)
     const [allowACHPayment, setAllowACHPayment] = useState(false)
-
     const [isCompany, setIsCompany] = useState(false)
 
     const [currentValue, setCurrentValue] = useState("");
@@ -141,7 +139,7 @@ const Invoices = () => {
     return (
         <Grid>
             <Grid.Column width={16}>
-                <Header as="h2">Create Invoice</Header>
+                <Header as="h2">Update Invoice</Header>
             </Grid.Column>
             <Grid.Column width={16}>
                 <Accordion as={Menu} vertical className="createInvoice">
@@ -150,18 +148,26 @@ const Invoices = () => {
                             active={activeIndex === 0}
                             index={0}
                             onClick={handleClick}
-                        > <div className="indiviCompany">
+                        ><div className="indiviCompany">
                                 <span>Individual</span>
                                 <Checkbox toggle checked={isCompany} onChange={(e, data) => setIsCompany(data.checked)} />
                                 <span>Company</span>
                             </div>
-                        </Accordion.Title>
-                        <Accordion.Content active={activeIndex === 0}>
+                        </Accordion.Title>                        
+                    </Menu.Item>
+
+                    <Menu.Item>
+                        <Accordion.Title
+                            active={activeIndex === 1}
+                            content='Individual Name'
+                            index={1}
+                            onClick={handleClick}
+                        />
+                        <Accordion.Content
+                            active={activeIndex === 1}
+                        >
                             <Form size="large">
                                 <Grid columns="3">
-                                    <Grid.Column width={16}>
-                                        <Header as="h3">{isCompany ? 'Company Name' : 'Individual Name'}</Header>
-                                    </Grid.Column>
                                     <Grid.Column>
                                         {isCompany ? <Dropdown
                                             options={companyOptions}
@@ -192,14 +198,10 @@ const Invoices = () => {
                                                 onChange={handleIndividualChange}
                                             />
                                         }
-
-
-
                                     </Grid.Column>
                                     <Grid.Column>
                                         <Form.Input placeholder="Customer Number" fluid />
                                     </Grid.Column>
-
                                     <Grid.Column>
                                         <Form.Input placeholder="Invoice Number" fluid />
                                     </Grid.Column>
@@ -210,19 +212,19 @@ const Invoices = () => {
                                         <Button className="btn-secondary" onClick={() => setActiveIndex(activeIndex + 1)}>Next</Button>
                                     </Grid.Column>
                                 </Grid>
-                            </Form>
+                                </Form>
                         </Accordion.Content>
                     </Menu.Item>
 
                     <Menu.Item>
                         <Accordion.Title
-                            active={activeIndex === 1}
+                            active={activeIndex === 2}
                             content='Payable To'
-                            index={1}
+                            index={2}
                             onClick={handleClick}
                         />
                         <Accordion.Content
-                            active={activeIndex === 1}
+                            active={activeIndex === 2}
                         >
                             <Form size="large">
                                 <Grid columns="3">
@@ -272,13 +274,13 @@ const Invoices = () => {
                     </Menu.Item>
                     <Menu.Item>
                         <Accordion.Title
-                            active={activeIndex === 2}
+                            active={activeIndex === 3}
                             content='Bill To'
-                            index={2}
+                            index={3}
                             onClick={handleClick}
                         />
                         <Accordion.Content
-                            active={activeIndex === 2}
+                            active={activeIndex === 3}
                         >
                             <Form size="large">
                                 <Grid columns="3">
@@ -331,13 +333,13 @@ const Invoices = () => {
                     </Menu.Item>
                     <Menu.Item>
                         <Accordion.Title
-                            active={activeIndex === 3}
+                            active={activeIndex === 4}
                             content='Items'
-                            index={3}
+                            index={4}
                             onClick={handleClick}
                         />
                         <Accordion.Content
-                            active={activeIndex === 3}
+                            active={activeIndex === 4}
                         >
                             <Form size="large">
 
@@ -435,13 +437,13 @@ const Invoices = () => {
                     </Menu.Item>
                     <Menu.Item>
                         <Accordion.Title
-                            active={activeIndex === 4}
+                            active={activeIndex === 5}
                             content='Options/Message'
-                            index={4}
+                            index={5}
                             onClick={handleClick}
                         />
                         <Accordion.Content
-                            active={activeIndex === 4}
+                            active={activeIndex === 5}
                         >
                             <Form size="large">
                                 <Grid >
@@ -503,7 +505,7 @@ const Invoices = () => {
                                     <Grid.Column width={16} textAlign="right">
                                         <Button className="btn-primary">Mark as Paid</Button>
                                         <Button className="btn-primary" onClick={() => setActiveIndex(activeIndex - 1)}>Prev</Button>
-                                        <Button className="btn-secondary" as={Link} to={`${env.PUBLIC_URL}/dashboard/invoice`}>Create Invoice</Button>
+                                        <Button className="btn-secondary" as={Link} to={`${env.PUBLIC_URL}/dashboard/invoice`}>Update Invoice</Button>
                                     </Grid.Column>
                                 </Grid>
                             </Form>
@@ -519,4 +521,4 @@ const Invoices = () => {
 
 
 
-export default Invoices;
+export default UpdateInvoice;

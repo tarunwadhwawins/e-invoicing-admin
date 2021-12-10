@@ -71,8 +71,10 @@ const CustomerDetail = () => {
                                     <Label color="blue">Pending</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List>
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
@@ -83,8 +85,10 @@ const CustomerDetail = () => {
                                     <Label color="green">Paid</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List>
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
@@ -95,8 +99,10 @@ const CustomerDetail = () => {
                                     <Label color="red">Overdue</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List>
                                 </Table.Cell>
                             </Table.Row>
                         </Table.Body>

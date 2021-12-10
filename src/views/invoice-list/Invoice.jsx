@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Header, Form, Icon, Table, Label, Menu } from 'semantic-ui-react';
+import { Grid, Header, Form, Icon, Table, Label, Menu, List } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
 import { env } from '../../shared/functional/global-import';
 
@@ -40,8 +40,10 @@ const Invoice = () => {
                                     <Label color="blue"> Pending</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List> 
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
@@ -54,8 +56,10 @@ const Invoice = () => {
                                     <Label color="green"> Paid</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List> 
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
@@ -68,8 +72,10 @@ const Invoice = () => {
                                     <Label color="blue"> Pending</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List> 
                                 </Table.Cell>
                             </Table.Row>
                         </Table.Body>

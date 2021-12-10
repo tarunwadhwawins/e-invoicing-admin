@@ -68,7 +68,7 @@
     color: $default-color;
     border-radius: 7px;
     padding: 10px 25px;
-    font-size: 18px;
+    font-size: 15px;
     border: 2px solid $primary-color;
     &:hover,&:focus {
         background-color: transparent;
@@ -84,8 +84,8 @@
     background-color: $secondary-color;
     color: $contrast-color;
     border-radius: 7px;
-    padding: 10px 25px;
-    font-size: 18px;
+    padding: 9px ​20p;
+    font-size: 15px;
     border: 2px solid $secondary-color;
     &:hover,&:focus {
         background-color: $contrast-color;
@@ -117,4 +117,63 @@ p {
             border-radius: 10px;
         }
     }
+}
+.rightAlign{
+    text-align: right;
+    margin-bottom: 5px;
+}
+.tabSection{
+    margin-bottom: 30px;
+    .ui{
+        &.text.menu{
+            margin: 0;
+            min-height: auto;
+            a{
+                font-size: 16px !important;
+                margin-bottom: 0 !important;
+                &.active{
+                    border-bottom: 3px solid #2485b1;
+                    border-radius: 0;
+                    color: #2485b1;
+                }
+            }
+        }
+    }
+    
+}
+.idCaption{
+    margin: 10px 0 20px!important;
+    span{
+        font-weight: normal;
+    }
+}
+.textField{
+    margin : 15px 0;
+    textarea {
+        margin: 0;
+        width: 100%;
+        flex: 1 0 auto;
+        outline: 0;
+        -webkit-tap-highlight-color: rgba(255,255,255,0);
+        text-align: left;
+        line-height: 1.21428571em;
+        font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+        padding: 0.67857143em 1em;
+        background: #fff;
+        border: 1px solid rgba(34,36,38,.15);
+        color: rgba(0,0,0,.87);
+        border-radius: 0.28571429rem;
+        transition: box-shadow .1s ease,border-color .1s ease;
+        box-shadow: none;
+        resize: none;
+        min-height: 80px;
+    }
+}
+.subCaptionTitle {
+    padding-top: 0 !important;
+    p{
+        color: #838181;
+        letter-spacing: 0.5px;
+        padding-top: 0;
+    }    
 }
