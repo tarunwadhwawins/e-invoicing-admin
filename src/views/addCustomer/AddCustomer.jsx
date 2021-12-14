@@ -96,11 +96,20 @@ const panes = [
     { menuItem: 'Card', render: () => 
     <Tab.Pane>
         <Grid columns="3">
-            <Grid.Column width="13">
-                <Form.Input placeholder="Card Number" fluid />
+            <Grid.Column width="10">
+                <h3>Card Number</h3>
+                <Form.Input placeholder="XXXX XXXX XXXX XXXX" fluid />
             </Grid.Column>
             <Grid.Column width="3">
+                <h3>Exp.</h3>
                 <Form.Input placeholder="MM/YY" fluid />
+            </Grid.Column>
+            <Grid.Column width="3">
+                <h3>CVC No.</h3>
+                <Form.Input placeholder="XXX" fluid />
+            </Grid.Column>
+            <Grid.Column width={16} className="rightAlign">
+                <Button className="btn-secondary"><Icon name="plus" />Add Card</Button>
             </Grid.Column>
         </Grid>
     </Tab.Pane> },
@@ -188,10 +197,10 @@ const AddCustomer = () => {
                             <Form size="large">
                                 <Grid columns="3">
                                     <Grid.Column width={8}>
-                                        <Form.Input placeholder="Customer Number" fluid />                                        
+                                        <Form.Input placeholder="Customer Name" fluid />                                        
                                     </Grid.Column>
                                     <Grid.Column width={8}>
-                                        <Form.Input placeholder="Merchant ID" fluid />
+                                        <Form.Input placeholder=" Customer Number" fluid />
                                     </Grid.Column>
                                     <Grid.Column width={16} textAlign="right">
                                         <Button className="btn-secondary" onClick={() => setActiveIndex(activeIndex + 1)}>Next</Button>
