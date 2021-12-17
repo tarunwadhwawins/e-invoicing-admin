@@ -64,7 +64,7 @@ const CustomerDetail = () => {
 
                         <Table.Body>
                             <Table.Row>
-                                <Table.Cell><Link to="#">45412</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
                                 <Table.Cell>$18.00</Table.Cell>
                                 <Table.Cell>Nov 20, 2021</Table.Cell>
                                 <Table.Cell>
@@ -78,7 +78,7 @@ const CustomerDetail = () => {
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-detail`}>454545</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
                                 <Table.Cell>$22.00</Table.Cell>
                                 <Table.Cell>Nov 15, 2021</Table.Cell>
                                 <Table.Cell>
@@ -92,7 +92,7 @@ const CustomerDetail = () => {
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell><Link to="#">65542</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
                                 <Table.Cell>$25.00</Table.Cell>
                                 <Table.Cell>Nov 18, 2021</Table.Cell>
                                 <Table.Cell>

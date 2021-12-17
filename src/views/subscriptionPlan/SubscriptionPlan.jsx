@@ -1,8 +1,15 @@
 import React from 'react'
-import { Grid, Header, Form, Icon, Table, Label } from 'semantic-ui-react';
+import { Grid, Header, Form, Icon, Table, Label, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
+import { env } from '../../shared/functional/global-import';
+import  SubscriptionModal from '../modal/SubscriptionModal';
 
 const SubscriptionPlan = () => {
+    const [openModal, setOpenModal] = React.useState(false)
+
+    const closeSubscriptionModal=()=>{
+        setOpenModal(!openModal)
+    }
     return (
         <Grid>
             <Grid.Column width={4} verticalAlign="middle">
@@ -10,6 +17,9 @@ const SubscriptionPlan = () => {
             </Grid.Column>
             <Grid.Column width={8}>
                 <Form.Input size="large" action={{ icon: 'search' }} placeholder='Search...' fluid />
+            </Grid.Column>
+            <Grid.Column width={4} verticalAlign="right">
+                <Button as={Link} to={`${env.PUBLIC_URL}/dashboard/user-setting`} className="btn-primary">Back</Button>
             </Grid.Column>
             <Grid.Column width={16}>
                 <div className="commonTable">
@@ -35,7 +45,7 @@ const SubscriptionPlan = () => {
                                     <Label color="green"> Active</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon onClick={closeSubscriptionModal} name="edit outline" color="blue" title="Edit" link />
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
@@ -47,7 +57,7 @@ const SubscriptionPlan = () => {
                                     <Label color="green"> Active</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon onClick={closeSubscriptionModal} name="edit outline" color="blue" title="Edit" link />
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
@@ -59,11 +69,11 @@ const SubscriptionPlan = () => {
                                     <Label color="green"> Active</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon onClick={closeSubscriptionModal} name="edit outline" color="blue" title="Edit" link />
                                 </Table.Cell>
                             </Table.Row>
                         </Table.Body>
-
+                        <SubscriptionModal openModal={openModal} closeModal={closeSubscriptionModal}/>
                     </Table>
                 </div>
             </Grid.Column>

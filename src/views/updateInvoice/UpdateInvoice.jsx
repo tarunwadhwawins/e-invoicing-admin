@@ -505,7 +505,7 @@ const UpdateInvoice = () => {
                                     <Grid.Column width={16} textAlign="right">
                                         <Button className="btn-primary">Mark as Paid</Button>
                                         <Button className="btn-primary" onClick={() => setActiveIndex(activeIndex - 1)}>Prev</Button>
-                                        <Button className="btn-secondary" as={Link} to={`${env.PUBLIC_URL}/dashboard/invoice`}>Update Invoice</Button>
+                                        <Button className="btn-secondary" as={Link} to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>Preview Invoice</Button>
                                     </Grid.Column>
                                 </Grid>
                             </Form>

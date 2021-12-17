@@ -1,9 +1,15 @@
 import React from 'react';
 import { Grid, Header, Form, Icon, Table, Label, Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
-
+import  SubscriptionModal from '../modal/SubscriptionModal';
 
 const Subscription = () => {
+    const [openModal, setOpenModal] = React.useState(false)
+
+    const closeSubscriptionModal=()=>{
+        setOpenModal(!openModal)
+    }
+
     return (
         <Grid>
             <Grid.Column width={4} verticalAlign="middle">
@@ -43,7 +49,7 @@ const Subscription = () => {
                                 </Table.Cell>
                                 <Table.Cell>$22.00</Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon onClick={closeSubscriptionModal} name="edit outline" color="blue" title="Edit" link />
                                     <Icon name="trash alternate outline" color="red" title="Delete" link />
                                 </Table.Cell>
                             </Table.Row>
@@ -58,7 +64,7 @@ const Subscription = () => {
                                 </Table.Cell>
                                 <Table.Cell>$22.00</Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon onClick={closeSubscriptionModal} name="edit outline" color="blue" title="Edit" link />
                                     <Icon name="trash alternate outline" color="red" title="Delete" link />
                                 </Table.Cell>
                             </Table.Row>
@@ -73,7 +79,7 @@ const Subscription = () => {
                                 </Table.Cell>
                                 <Table.Cell>$25.00</Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
+                                    <Icon onClick={closeSubscriptionModal} name="edit outline" color="blue" title="Edit" link />
                                     <Icon name="trash alternate outline" color="red" title="Delete" link />
                                 </Table.Cell>
                             </Table.Row>
@@ -96,6 +102,7 @@ const Subscription = () => {
                                 </Table.HeaderCell>
                             </Table.Row>
                         </Table.Footer>
+                        <SubscriptionModal openModal={openModal} closeModal={closeSubscriptionModal}/>
                     </Table>
                 </div>
             </Grid.Column>

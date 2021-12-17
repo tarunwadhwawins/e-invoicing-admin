@@ -11,10 +11,16 @@
     }
 }
 
-
 .secondary-color {
     color: $secondary-color!important;
 }
+.alternate-color-900 {
+    color: $alternate-color-900;
+}
+.m-0 {
+    margin: 0!important;
+}
+
 .field {
     .ui.input {
         input {
@@ -67,7 +73,7 @@
     background-color: $primary-color;
     color: $default-color;
     border-radius: 7px;
-    padding: 10px 25px;
+    padding: 9px ​20p;
     font-size: 15px;
     border: 2px solid $primary-color;
     &:hover,&:focus {
@@ -84,7 +90,7 @@
     background-color: $secondary-color;
     color: $contrast-color;
     border-radius: 7px;
-    padding: 9px ​20p;
+    padding: 10px 25px;
     font-size: 15px;
     border: 2px solid $secondary-color;
     &:hover,&:focus {
@@ -123,7 +129,6 @@ p {
     margin-bottom: 5px;
 }
 .tabSection{
-    margin-bottom: 30px;
     .ui{
         &.text.menu{
             margin: 0;
@@ -176,4 +181,99 @@ p {
         letter-spacing: 0.5px;
         padding-top: 0;
     }    
+}
+.dragDropCol {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    border: 1px dashed #ccc;
+    border-radius: 15px;
+}
+.dragDropCaption {
+    text-align: center;
+    color: #918f8f;
+    margin: 15px 0 !important;
+}
+.roleDetails h5.ui.header {
+    font-size: 1.3rem;
+    border: none;
+    margin: calc(2rem - 0.14286em) 0 1rem;
+    padding: 0;
+    font-family: Lato,"Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    line-height: 1.28571429em;
+    text-transform: none;
+    color: rgba(0,0,0,.87);
+}
+.checkAll label {
+    font-size: 16px !important;
+    font-weight: 600;
+}
+.reportCol {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+.rightAlign{
+    text-align: right;
+}
+.tempInvoiceDetail h4.ui.header {
+    margin: 3px 0;
+}
+.removeM{
+    margin: 0 !important;
+}
+.removeP{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+h3.ui.header.detailCaption{
+    background-color: #2485b1;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+h3.ui.header.detailCaptions {
+    background-color: #d9d8d8de;
+    color: #000000;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.six.wide.column.templateCardPayment {
+    background-color: #fff;
+    padding: 20px !important;
+}
+.ui.grid.templateList {
+    padding-bottom: 20px;
+}
+tempList img.ui.image {
+    width: 30px;
+}
+.tempInvoiceDetails{
+    text-align: right;
+}
+.tempInvoiceDetails h4{
+    margin: 5px 0 !important;
+}
+.tempList {
+    background-color: #fff;
+    padding: 12px 15px;
+}
+.tempList a.ui.header {
+    font-size: 14px !important;
+}
+.subscriptionToggle {
+    display: flex;
+    align-items: center;
+}
+.modalDescription{
+    flex: auto !important;
+}
+.subscriptionToggle span.planInactiveStatus {
+    margin-right: 10px;
+}
+.subscriptionToggle span.planActiveStatus {
+    margin-left: 10px;
 }

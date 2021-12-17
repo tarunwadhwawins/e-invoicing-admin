@@ -31,8 +31,8 @@ const Invoice = () => {
 
                         <Table.Body>
                             <Table.Row>
-                                <Table.Cell><Link to="#">74756</Link></Table.Cell>
-                                <Table.Cell><Link to="#">Joseph William</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                                 <Table.Cell>$18.00</Table.Cell>
                                 <Table.Cell>Nov 20, 2021</Table.Cell>
                                 <Table.Cell>Nov 20, 2021</Table.Cell>
@@ -42,13 +42,13 @@ const Invoice = () => {
                                 <Table.Cell>
                                     <List horizontal>
                                         <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
-                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/copy-invoice`}><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
                                     </List> 
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell><Link to="#">565456</Link></Table.Cell>
-                            <Table.Cell><Link to="#">Robert Henry</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                                 <Table.Cell>$22.00</Table.Cell>
                                 <Table.Cell>Nov 15, 2021</Table.Cell>
                                 <Table.Cell>Nov 15, 2021</Table.Cell>
@@ -58,13 +58,13 @@ const Invoice = () => {
                                 <Table.Cell>
                                     <List horizontal>
                                         <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
-                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/copy-invoice`}><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
                                     </List> 
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-detail`}>454545</Link></Table.Cell>
-                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Gilbert Riley</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                                 <Table.Cell>$25.00</Table.Cell>
                                 <Table.Cell>Nov 18, 2021</Table.Cell>
                                 <Table.Cell>Nov 18, 2021</Table.Cell>
@@ -74,7 +74,7 @@ const Invoice = () => {
                                 <Table.Cell>
                                     <List horizontal>
                                         <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
-                                        <List.Item><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/copy-invoice`}><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
                                     </List> 
                                 </Table.Cell>
                             </Table.Row>

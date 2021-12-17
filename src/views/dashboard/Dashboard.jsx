@@ -34,8 +34,8 @@ const panes = [
 
                         <Table.Body>
                             <Table.Row>
-                                <Table.Cell><Link to="#">551516</Link></Table.Cell>
-                                <Table.Cell><Link to="#">Mission Beach Villas</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                                 <Table.Cell>$18.00</Table.Cell>
                                 <Table.Cell>Nov 20, 2021</Table.Cell>
                                 <Table.Cell>Nov 20, 2021</Table.Cell>
@@ -43,13 +43,15 @@ const panes = [
                                     <Label color="blue"> Pending</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/copy-invoice`}><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List> 
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell><Link to="#">474665</Link></Table.Cell>
-                                <Table.Cell><Link to="#">Joseph	William</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                                 <Table.Cell>$22.00</Table.Cell>
                                 <Table.Cell>Nov 15, 2021</Table.Cell>
                                 <Table.Cell>Nov 15, 2021</Table.Cell>
@@ -57,13 +59,15 @@ const panes = [
                                     <Label color="green"> Paid</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/copy-invoice`}><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List>
                                 </Table.Cell>
                             </Table.Row>
                             <Table.Row>
-                                <Table.Cell><Link to="#">65452</Link></Table.Cell>
-                                <Table.Cell><Link to="#">Steve Smith</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                                <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                                 <Table.Cell>$25.00</Table.Cell>
                                 <Table.Cell>Nov 18, 2021</Table.Cell>
                                 <Table.Cell>Nov 18, 2021</Table.Cell>
@@ -71,8 +75,10 @@ const panes = [
                                     <Label color="blue"> Pending</Label>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Icon name="edit outline" color="blue" title="Edit" link />
-                                    <Icon name="copy outline" color="green" title="Copy Invoice" link />
+                                    <List horizontal>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/update-invoice`}><Icon name="edit outline" color="blue" title="Edit" link /></List.Item>
+                                        <List.Item as={Link} to={`${env.PUBLIC_URL}/dashboard/copy-invoice`}><Icon name="copy outline" color="green" title="Copy Invoice" link /></List.Item>
+                                    </List>
                                 </Table.Cell>
                             </Table.Row>
                         </Table.Body>
@@ -117,8 +123,8 @@ const panes = [
 
                     <Table.Body>
                         <Table.Row>
-                            <Table.Cell><Link to="#">551516</Link></Table.Cell>
-                            <Table.Cell><Link to="#">Mission Beach Villas</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>$18.00</Table.Cell>
                             <Table.Cell>Dec 20, 2021</Table.Cell>
                             <Table.Cell>Dec 20, 2021</Table.Cell>
@@ -131,8 +137,8 @@ const panes = [
                             </Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><Link to="#">556665</Link></Table.Cell>
-                            <Table.Cell><Link to="#">Joseph	William</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>$22.00</Table.Cell>
                             <Table.Cell>Dec 15, 2021</Table.Cell>
                             <Table.Cell>Dec 15, 2021</Table.Cell>
@@ -145,7 +151,7 @@ const panes = [
                             </Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-detail`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
                             <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>$25.00</Table.Cell>
                             <Table.Cell>Dec 18, 2021</Table.Cell>
@@ -200,8 +206,8 @@ const panes = [
 
                     <Table.Body>
                         <Table.Row>
-                            <Table.Cell><Link>65465</Link></Table.Cell>
-                            <Table.Cell><Link>John Lilki</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>September 14, 2020</Table.Cell>
                             <Table.Cell>$452.00</Table.Cell>
                             <Table.Cell>441 days</Table.Cell>
@@ -212,8 +218,8 @@ const panes = [
                             </Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><Link>45566</Link></Table.Cell>
-                            <Table.Cell><Link>Steve Smith</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>September 14, 2020</Table.Cell>
                             <Table.Cell>$553.00</Table.Cell>
                             <Table.Cell>441 days</Table.Cell>
@@ -224,7 +230,7 @@ const panes = [
                             </Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-detail`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
                             <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>September 14, 2020</Table.Cell>
                             <Table.Cell>$673.00</Table.Cell>
@@ -277,7 +283,7 @@ const panes = [
 
                     <Table.Body>
                         <Table.Row>
-                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-detail`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
                             <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>September 14, 2020</Table.Cell>
                             <Table.Cell>$673.00</Table.Cell>
@@ -289,8 +295,8 @@ const panes = [
                             </Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><Link>65465</Link></Table.Cell>
-                            <Table.Cell><Link>John Lilki</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>September 14, 2020</Table.Cell>
                             <Table.Cell>$452.00</Table.Cell>
                             <Table.Cell>441 days</Table.Cell>
@@ -301,8 +307,8 @@ const panes = [
                             </Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell><Link>45566</Link></Table.Cell>
-                            <Table.Cell><Link>Steve Smith</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/invoice-template`}>595625</Link></Table.Cell>
+                            <Table.Cell><Link to={`${env.PUBLIC_URL}/dashboard/customer-detail`}>Jane Doe</Link></Table.Cell>
                             <Table.Cell>September 14, 2020</Table.Cell>
                             <Table.Cell>$553.00</Table.Cell>
                             <Table.Cell>441 days</Table.Cell>
